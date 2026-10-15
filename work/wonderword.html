@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WonderWord AI — Ridham Chawala</title>
+<meta name="description" content="WonderWord AI case study: an AI reading coach that turns a child’s real school worksheet into an engaging reading adventure.">
+<meta name="theme-color" content="#0F0F12">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/styles.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <nav class="wrap navbar" aria-label="Primary">
+    <a class="brand" href="../index.html" aria-label="Ridham Chawala, home">
+      <span class="brand-mark" aria-hidden="true">R</span>
+      <span>Ridham Chawala<small>AI Product Manager</small></span>
+    </a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav-panel" aria-label="Open menu"><span></span></button>
+    <div class="nav-panel" id="nav-panel">
+      <ul class="nav-links">
+        <li><a href="../index.html#work" aria-current="page">Work</a></li>
+        <li><a href="../index.html#playground">Playground</a></li>
+        <li><a href="../index.html#experience">Experience</a></li>
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+      <a class="btn btn--sm nav-cta" href="../index.html#contact">Get in touch</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+<section class="cs-hero" aria-labelledby="cs-title">
+  <div class="wrap" style="position:relative;z-index:1">
+    <p class="crumbs"><a href="../index.html#work">Selected work</a> <span aria-hidden="true">/</span> WonderWord AI</p>
+    <div class="pills"><span class="pill pill--shipped">Shipped · Private beta</span> <span class="pill">Consumer AI</span></div>
+    <h1 class="h1" id="cs-title">WonderWord AI</h1>
+    <p class="lede">An AI reading coach that turns a child’s real school worksheet into an engaging reading adventure.</p>
+    <dl class="cs-facts"><div><dt>Role</dt><dd>Co-founder and Product Lead</dd></div><div><dt>Timeline</dt><dd>Aug 2026 – Present</dd></div><div><dt>Team</dt><dd>8 engineers + 2.5 FTE hires</dd></div><div><dt>Stack</dt><dd>PWA · FastAPI</dd></div></dl>
+    <h2 class="sr-only">Artifacts</h2>
+    <div class="artifacts"><a class="artifact" href="https://www.wonderwordai.net/" target="_blank" rel="noopener noreferrer"><span class="label">Live product</span><b>wonderwordai.net</b><span class="sr-only"> — WonderWord AI live product (opens in a new tab)</span></a><a class="artifact" href="https://www.figma.com/design/5qQ23MWvgDfnO5FrM35PNg/Wonder-Word-AI?node-id=0-1&amp;p=f&amp;t=52CQ14lJvkkfFzAY-0" target="_blank" rel="noopener noreferrer"><span class="label">Design</span><b>Figma file</b><span class="sr-only"> — WonderWord AI Figma file (opens in a new tab)</span></a><a class="artifact" href="https://github.com/WonderWord-DEV-Team/WonderWordAI/tree/main" target="_blank" rel="noopener noreferrer"><span class="label">Code</span><b>GitHub repository</b><span class="sr-only"> — WonderWord AI GitHub repository (opens in a new tab)</span></a></div>
+    
+  </div>
+</section>
+
+<div class="wrap cs-body">
+  <nav class="toc" aria-label="Case study contents">
+    <details open><summary>Contents</summary>
+    <ol><li><a href="#context">Context and target user</a></li><li><a href="#problem">Problem and evidence</a></li><li><a href="#role">My role and team</a></li><li><a href="#constraints">Constraints</a></li><li><a href="#hypothesis">Product hypothesis</a></li><li><a href="#alternatives">Alternatives and tradeoffs</a></li><li><a href="#decisions">Key decisions</a></li><li><a href="#experience">Shipped experience</a></li><li><a href="#evaluation">Evaluation and success metrics</a></li><li><a href="#outcomes">Outcomes and validation status</a></li><li><a href="#lessons">Lessons and next steps</a></li></ol>
+    </details>
+  </nav>
+  <article>
+<section class="cs-sec" id="context" aria-labelledby="context-h"><span class="meta">01</span><h2 id="context-h">Context and target user</h2>
+
+<p>WonderWord AI is a reading coach for <strong>K–5 students and their parents</strong>. Instead of asking a family to adopt yet another content library, it starts from the worksheet the school already sent home: a child or parent photographs the page, the child reads it aloud with karaoke-style highlighting, and missed words become short, guardrailed stories.</p>
+<p>The product has two users with different jobs. The child needs reading to feel like an adventure rather than a test. The parent — who pays — needs to see where the child is actually stuck, without adding screen time.</p>
+<p class="small">The source portfolio also states that one in three US kids struggles with reading in early grades; no citation is given there, so it is not used as evidence on this page.</p>
+
+</section>
+<section class="cs-sec" id="problem" aria-labelledby="problem-h"><span class="meta">02</span><h2 id="problem-h">Problem and evidence</h2>
+
+<p>Every existing reading app works inside its own content library instead of the homework already in the backpack. Homework time becomes a nightly power struggle, and parents have no clear view of where their child is stuck.</p>
+<div class="evidence-grid">
+  <div class="ev-card"><span class="pill pill--validated">Validated finding</span><h4>Real homework beats a library</h4><p>Parents photograph the worksheet the school assigned rather than adopt another content library. Confirmed in discovery — parents were already photographing homework into ChatGPT, a tool never built for children.</p></div>
+  <div class="ev-card"><span class="pill pill--validated">Research input</span><h4>50+ voice-of-customer interviews</h4><p>Used to shape and price the three-tier freemium model.</p></div>
+</div>
+
+</section>
+<section class="cs-sec" id="role" aria-labelledby="role-h"><span class="meta">03</span><h2 id="role-h">My role and team</h2>
+
+<p><strong>Co-founder and Product Lead</strong>, August 2026 – present.</p>
+<ul>
+  <li>Lead product strategy and roadmap across three MVPs through March 2027.</li>
+  <li>Manage a cross-functional team of 8 engineers plus 2.5 FTE hires.</li>
+  <li>Established product processes, metrics tracking in Amplitude and Mixpanel, and go-to-market.</li>
+  <li>Designed the three-tier freemium model with annual billing.</li>
+</ul>
+
+</section>
+<section class="cs-sec" id="constraints" aria-labelledby="constraints-h"><span class="meta">04</span><h2 id="constraints-h">Constraints</h2>
+
+<ul>
+  <li><strong>Children’s privacy and safety.</strong> COPPA is treated as the specification, not a policy page added afterward. Every AI-generated story must pass content-safety checks before a child sees it.</li>
+  <li><strong>Speech recognition on developing voices.</strong> Word-recognition error must stay below 10% on developing child phonetics; above it, the product tells children they are wrong when they are right.</li>
+  <li><strong>Real-world capture.</strong> OCR has to cope with crumpled, glared, third-generation photocopies — capture to interactive text within a 3-second budget.</li>
+  <li><strong>Reading sync.</strong> Karaoke highlighting held to a maximum of 200 ms sync latency.</li>
+  <li><strong>Story limits.</strong> Correction stories stay under a third-grade Flesch-Kincaid ceiling, within 40 words, using known vocabulary, with a minimum validation score of 90.</li>
+  <li><strong>Time.</strong> Concept to beta in four weeks; the teacher-portal decision references an eight-week MVP window.</li>
+</ul>
+
+</section>
+<section class="cs-sec" id="hypothesis" aria-labelledby="hypothesis-h"><span class="meta">05</span><h2 id="hypothesis-h">Product hypothesis</h2>
+
+<blockquote class="callout" style="margin:0 0 24px"><p style="font-family:var(--f-display);font-size:clamp(22px,2.2vw,28px);line-height:1.35;color:var(--text)">If WonderWord AI holds word-recognition error below 10%, then K–5 students read more confidently, parents feel measurably less homework stress, and families pay for it.</p></blockquote>
+<p>The error rate is the load-bearing number. Every architecture decision downstream, from Wav2Vec2 confidence scoring to the four-layer story guardrails, exists to defend that threshold. The bet breaks into three hypotheses, each at a different level of evidence:</p>
+<div class="evidence-grid">
+  <div class="ev-card"><span class="pill pill--validated">Validated</span><h4>Real homework beats a library</h4><p>Confirmed in discovery — parents were already photographing homework into ChatGPT.</p></div>
+  <div class="ev-card"><span class="pill pill--partial">Partly validated</span><h4>Story beats a red X</h4><p>Children accept correction delivered as a two-sentence story rather than an error state. Strong signal in moderated sessions; needs unmoderated beta data to confirm at scale.</p></div>
+  <div class="ev-card"><span class="pill pill--beta">In test · private beta</span><h4>Off-screen retention</h4><p>A weekly report plus one physical game sustains parent engagement without adding screen time. Measured in private beta through the Activity Action Rate.</p></div>
+  <div class="ev-card"><span class="pill pill--hypothesis">Hypothesis</span><h4>Families pay</h4><p>The free tier converts to a paid coaching tier. Pricing is modeled; see projections below.</p></div>
+</div>
+
+</section>
+<section class="cs-sec" id="alternatives" aria-labelledby="alternatives-h"><span class="meta">06</span><h2 id="alternatives-h">Alternatives and tradeoffs</h2>
+
+<h3>Teachers in the MVP?</h3>
+<p>Options considered: build the teacher portal in the MVP; build a read-only teacher view as a compromise; or defer teachers until consumer demand is proven. <strong>Chose to defer.</strong> Classroom rostering, district procurement and FERPA scope would have consumed the entire MVP window before a single family proved the core loop works. Teachers are the better long-term business and the slower one to reach.</p>
+<h3>Monthly before annual billing</h3>
+<p>Monthly pricing ships first so the $9.99 point is validated against real conversion before a discount is layered on. Annual arrives in month three, once product-market fit is evidenced. An annual cohort bought before fit just locks in churn you have not yet earned the right to prevent.</p>
+<h3>Where personalization lives</h3>
+<p>Theme choice is the personalization lever that costs nothing at inference time: the same guardrailed generation, wrapped in whatever the child already likes.</p>
+<h3>Sign-in</h3>
+<p>Google for parents who want speed, email for parents who do not want another OAuth grant.</p>
+
+</section>
+<section class="cs-sec" id="decisions" aria-labelledby="decisions-h"><span class="meta">07</span><h2 id="decisions-h">Key decisions</h2>
+
+<ul>
+  <li><strong>No red X.</strong> A miscue triggers a two-sentence story starring the missed word, validated by four guardrails — vocabulary, complexity, content safety and structure — before it is ever shown. Below a score of 90 the child sees a pre-written fallback; a child never sees a validation error.</li>
+  <li><strong>Story validation as the P0 engineering risk</strong>, ahead of OCR accuracy, because the miscue moment decides whether the child comes back.</li>
+  <li><strong>Wav2Vec2 confidence scoring</strong> to defend the 10% word-recognition error ceiling.</li>
+  <li><strong>Daily Active Scans as north star</strong>, because it separates the two failure modes early: model accuracy versus parent habit.</li>
+  <li><strong>Family-first freemium</strong>, priced against tutoring rather than against other apps.</li>
+</ul>
+<p><a href="../index.html#playground">Try the story guardrail checker and pricing simulator in the playground →</a></p>
+
+</section>
+<section class="cs-sec" id="experience" aria-labelledby="experience-h"><span class="meta">08</span><h2 id="experience-h">Shipped experience</h2>
+
+<div class="shots">
+  <div class="tabs" role="tablist" aria-label="WonderWord AI screens">
+    <button class="btn btn--sm" role="tab" id="st-0" aria-controls="sp-0" aria-selected="true">Landing page</button>
+    <button class="btn btn--sm" role="tab" id="st-1" aria-controls="sp-1" aria-selected="false" tabindex="-1">Sign in</button>
+    <button class="btn btn--sm" role="tab" id="st-2" aria-controls="sp-2" aria-selected="false" tabindex="-1">Child home</button>
+    <button class="btn btn--sm" role="tab" id="st-3" aria-controls="sp-3" aria-selected="false" tabindex="-1">Story worlds</button>
+  </div>
+  <figure class="frame" role="tabpanel" id="sp-0" aria-labelledby="st-0">
+    <div class="bar"><i></i><i></i><i></i><span>wonderwordai.net</span></div>
+    <img src="../assets/img/ww-landing.jpg" alt="WonderWord AI landing page" width="1000" height="511" loading="lazy">
+    <figcaption>The public site. The hero states the job in one line and names the three things a parent gets: real-time feedback, biweekly reports, activity recommendations.</figcaption>
+  </figure>
+  <figure class="frame" role="tabpanel" id="sp-1" aria-labelledby="st-1" hidden>
+    <div class="bar"><i></i><i></i><i></i><span>wonderwordai.net/auth/login</span></div>
+    <img src="../assets/img/ww-signin.jpg" alt="WonderWord AI sign-in screen" width="1000" height="511" loading="lazy">
+    <figcaption>Two doors, one screen. Google for parents who want speed, email for parents who do not want another OAuth grant. The mascot appears before the child has done anything, so the first impression is a character rather than a form.</figcaption>
+  </figure>
+  <figure class="frame" role="tabpanel" id="sp-2" aria-labelledby="st-2" hidden>
+    <div class="bar"><i></i><i></i><i></i><span>wonder-word-ai.vercel.app/child</span></div>
+    <img src="../assets/img/ww-child-home.jpg" alt="WonderWord AI child home screen with the Snap homework action" width="1000" height="511" loading="lazy">
+    <figcaption>Snap homework is the primary action and sits dead centre. The streak banner and daily goal ring surround it rather than competing with it. Features not yet live are labelled inside the product itself.</figcaption>
+  </figure>
+  <figure class="frame" role="tabpanel" id="sp-3" aria-labelledby="st-3" hidden>
+    <div class="bar"><i></i><i></i><i></i><span>wonder-word-ai.vercel.app/child</span></div>
+    <img src="../assets/img/ww-story-worlds.jpg" alt="WonderWord AI Daily Refresh and story world selection" width="1000" height="511" loading="lazy">
+    <figcaption>Daily Refresh and six story worlds. Theme choice is the personalization lever that costs nothing at inference time: the same guardrailed generation, wrapped in whatever the child already likes.</figcaption>
+  </figure>
+</div>
+
+<h3>Six stages from backpack to parent report</h3>
+<p>The emotional curve matters more than the funnel. A six-year-old who feels stupid does not come back tomorrow. Choose a stage.</p>
+<div class="tabs" id="jtabs" role="tablist" aria-label="Journey stages" data-single-panel style="display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 4px">
+  <button class="btn btn--sm" role="tab" aria-controls="jpanel" aria-selected="false" tabindex="-1">Trigger</button>
+  <button class="btn btn--sm" role="tab" aria-controls="jpanel" aria-selected="false" tabindex="-1">Capture</button>
+  <button class="btn btn--sm" role="tab" aria-controls="jpanel" aria-selected="false" tabindex="-1">Read</button>
+  <button class="btn btn--sm" role="tab" aria-controls="jpanel" aria-selected="true">Miscue</button>
+  <button class="btn btn--sm" role="tab" aria-controls="jpanel" aria-selected="false" tabindex="-1">Reinforce</button>
+  <button class="btn btn--sm" role="tab" aria-controls="jpanel" aria-selected="false" tabindex="-1">Report</button>
+</div>
+<svg id="journey" class="journey-svg" viewBox="0 0 760 200" role="img" aria-label="Emotional curve across six stages; the low point is the Miscue stage and the high point is Reinforce."></svg>
+<div class="jdet" id="jpanel" role="tabpanel" aria-live="polite">
+  <div>
+    <h4 id="jname" style="font-size:20px"></h4>
+    <p id="jwhat" style="color:var(--text)"></p>
+    <p><strong>Pain.</strong> <span id="jpain"></span></p>
+    <p style="margin:0"><strong>Intervention.</strong> <span id="jfix"></span></p>
+  </div>
+  <div id="jmet"><span class="pill pill--target">Product spec</span><div class="big" id="jnum" style="margin-top:12px"></div><p class="small" id="jlab"></p></div>
+</div>
+<div class="callout"><h4>The low point is the whole product</h4><p>Miscue is the make-or-break stage. Every other stage can be merely good. If correction lands as failure, the child disengages and no dashboard saves the account. The four-layer guardrail system exists to protect this one moment, which is why story validation, not OCR accuracy, was the P0 engineering risk.</p></div>
+
+</section>
+<section class="cs-sec" id="evaluation" aria-labelledby="evaluation-h"><span class="meta">09</span><h2 id="evaluation-h">Evaluation and success metrics</h2>
+
+<ul>
+  <li><strong>North star:</strong> Daily Active Scans.</li>
+  <li><strong>Model quality gate:</strong> word-recognition error below 10% on developing child phonetics.</li>
+  <li><strong>Story gate:</strong> validation score of at least 90 across four checks; failures and scores are logged.</li>
+  <li><strong>Parent engagement:</strong> Activity Action Rate, measured in private beta.</li>
+  <li><strong>Progress signal for parents:</strong> WCPM trend and a phonics deficit map, shown after three sessions.</li>
+  <li><strong>Analytics:</strong> Amplitude and Mixpanel.</li>
+</ul>
+<div class="callout callout--rose"><h4>What would falsify this</h4><p>If beta families hit the error target and still churn by week two, the bet was wrong about the cause. The blocker would be parent habit, not model accuracy, and the roadmap would shift from speech tuning to onboarding.</p></div>
+
+</section>
+<section class="cs-sec" id="outcomes" aria-labelledby="outcomes-h"><span class="meta">10</span><h2 id="outcomes-h">Outcomes and validation status</h2>
+
+<div class="evidence-grid">
+  <div class="ev-card"><span class="pill pill--beta">Beta observation</span><h4>100+ families in four weeks</h4><p>Concept to private beta with 100+ families in four weeks. Private beta since August 2026.</p></div>
+  <div class="ev-card"><span class="pill pill--beta">In progress</span><h4>School pilots</h4><p>Recruiting school pilots for Q4 2026.</p></div>
+</div>
+<h3>Business model</h3>
+<p>Family-first freemium, priced against tutoring. <span class="pill pill--projection">Projected mix</span></p>
+<div class="tiers">
+  <div class="tier"><span class="meta">Free</span><div class="price">$0</div><p>Three readings a week, scan and read, one rotating story theme, Word Explorer, read-aloud, basic parent dashboard.</p><span class="pill pill--projection">Projected 70% of users</span></div>
+  <div class="tier mid"><span class="meta">DIY Coach</span><div class="price">$9.99<small>/mo</small></div><p>Unlimited readings, all seven story themes, Word Vision illustrations, weekly progress reports, AI activity recommendations. Or $99 a year.</p><span class="pill pill--projection">Projected 20%</span></div>
+  <div class="tier"><span class="meta">Family Coach</span><div class="price">$17.99<small>/mo</small></div><p>Everything in DIY Coach, up to three children, Word Beats songs, custom stories, print activity packs, sibling analytics. Or $179 a year.</p><span class="pill pill--projection">Projected 10%</span></div>
+</div>
+<div class="callout callout--amber">
+  <h4>Financial projections — modeled, not booked</h4>
+  <p>Unit economics modeled at $5–8 cost to serve per paying user for a 47–61% gross margin (August 2026 pricing strategy). Projected monthly recurring revenue of roughly $4,800 by Q1 2027. Projected paid mix of 30%. Typical tutoring cost is compared using published rates.</p>
+</div>
+
+</section>
+<section class="cs-sec" id="lessons" aria-labelledby="lessons-h"><span class="meta">11</span><h2 id="lessons-h">Lessons and next steps</h2>
+
+<ul>
+  <li><strong>Next:</strong> roadmap across three MVPs through March 2027; annual billing introduced in month three once fit is evidenced; school pilots in Q4 2026.</li>
+  <li><strong>Open question to resolve in beta:</strong> confirm “story beats a red X” with unmoderated data at scale.</li>
+  <li><strong>What would change the teacher decision:</strong> a school district committing to a paid pilot before launch — demand evidence, not a bet on it.</li>
+</ul>
+<p class="gap-note"><b>Not documented in the source portfolio.</b> A written retrospective of lessons learned. The items above are the documented next steps and decision triggers.</p>
+</section>
+  </article>
+</div>
+
+<div class="wrap">
+  <nav class="cs-next" aria-label="More case studies">
+    <a href="alert-triage-copilot.html"><span class="meta">← Previous</span><span class="t">Alert Triage Copilot</span></a>
+    <a class="r" href="interviewer-prep-coach.html"><span class="meta">Next →</span><span class="t">Interviewer Prep Coach</span></a>
+  </nav>
+</div>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <span>© 2026 Ridham Chawala · Fremont, California</span>
+    <span><a href="mailto:ridhambatra15@gmail.com">ridhambatra15@gmail.com</a> · <a href="../index.html">Back to portfolio</a></span>
+  </div>
+</footer>
+<script src="../assets/main.js" defer></script>
+</body>
+</html>

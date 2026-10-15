@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alert Triage Copilot — Ridham Chawala</title>
+<meta name="description" content="Alert Triage Copilot case study: an AI retrieval layer for network-operations alert triage, built on public system-log data.">
+<meta name="theme-color" content="#0F0F12">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/styles.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <nav class="wrap navbar" aria-label="Primary">
+    <a class="brand" href="../index.html" aria-label="Ridham Chawala, home">
+      <span class="brand-mark" aria-hidden="true">R</span>
+      <span>Ridham Chawala<small>AI Product Manager</small></span>
+    </a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav-panel" aria-label="Open menu"><span></span></button>
+    <div class="nav-panel" id="nav-panel">
+      <ul class="nav-links">
+        <li><a href="../index.html#work" aria-current="page">Work</a></li>
+        <li><a href="../index.html#playground">Playground</a></li>
+        <li><a href="../index.html#experience">Experience</a></li>
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+      <a class="btn btn--sm nav-cta" href="../index.html#contact">Get in touch</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+<section class="cs-hero" aria-labelledby="cs-title">
+  <div class="wrap" style="position:relative;z-index:1">
+    <p class="crumbs"><a href="../index.html#work">Selected work</a> <span aria-hidden="true">/</span> Alert Triage Copilot</p>
+    <div class="pills"><span class="pill pill--concept">Concept · Prototyped</span> <span class="pill">Enterprise AI</span></div>
+    <h1 class="h1" id="cs-title">Alert Triage Copilot</h1>
+    <p class="lede">An AI retrieval layer for network-operations alert triage, built and evaluated using public system-log data — not employer data.</p>
+    <dl class="cs-facts"><div><dt>Status</dt><dd>Concept, prototyped</dd></div><div><dt>Category</dt><dd>Enterprise AI</dd></div><div><dt>Data</dt><dd>Public system logs only</dd></div><div><dt>Artifacts</dt><dd>Brief · phase-one PRD · prototype</dd></div></dl>
+    <h2 class="sr-only">Artifacts</h2>
+    <div class="artifacts"><a class="artifact" href="https://claude.ai/artifact/6TXc3vHuuKzg7rUPvDqSU2" target="_blank" rel="noopener noreferrer"><span class="label">Prototype</span><b>Open the prototype</b><span class="sr-only"> — Alert Triage Copilot prototype (opens in a new tab)</span></a><a class="artifact" href="https://claude.ai/artifact/AEuqpmpvUZQWPWbeSbAwYL#2355c655-11a9" target="_blank" rel="noopener noreferrer"><span class="label">Brief</span><b>Product brief</b><span class="sr-only"> — Alert Triage Copilot product brief (opens in a new tab)</span></a></div>
+    
+  </div>
+</section>
+
+<div class="wrap cs-body">
+  <nav class="toc" aria-label="Case study contents">
+    <details open><summary>Contents</summary>
+    <ol><li><a href="#context">Context and target user</a></li><li><a href="#problem">Problem and evidence</a></li><li><a href="#role">My role and team</a></li><li><a href="#constraints">Constraints</a></li><li><a href="#hypothesis">Product hypothesis</a></li><li><a href="#alternatives">Alternatives and tradeoffs</a></li><li><a href="#decisions">Key decisions</a></li><li><a href="#experience">Prototype</a></li><li><a href="#evaluation">Evaluation and success metrics</a></li><li><a href="#outcomes">Validation status</a></li><li><a href="#lessons">Lessons and next steps</a></li></ol>
+    </details>
+  </nav>
+  <article>
+<section class="cs-sec" id="context" aria-labelledby="context-h"><span class="meta">01</span><h2 id="context-h">Context and target user</h2>
+
+<p>An AI retrieval layer for <strong>network-operations teams</strong> triaging alerts. It surfaces how similar past incidents were handled so operators are not re-solving problems someone already solved.</p>
+<div class="callout callout--cyan"><h4>Data source</h4><p>Built and evaluated on public system-log data. No employer data anywhere in it.</p></div>
+
+</section>
+<section class="cs-sec" id="problem" aria-labelledby="problem-h"><span class="meta">02</span><h2 id="problem-h">Problem and evidence</h2>
+
+<p>Ops teams drown in alert volume and re-solve incidents someone already solved last quarter. The scarce resource is attention, not data.</p>
+<p class="gap-note"><b>Not documented in the source portfolio.</b> Quantitative evidence on alert volume or time spent; the prototype uses public logs.</p>
+</section>
+<section class="cs-sec" id="role" aria-labelledby="role-h"><span class="meta">03</span><h2 id="role-h">My role and team</h2>
+<p class="gap-note"><b>Not documented in the source portfolio.</b> The specific role and team for this concept. Artifacts produced: a product brief, a phase-one PRD with acceptance criteria and a working prototype.</p>
+</section>
+<section class="cs-sec" id="constraints" aria-labelledby="constraints-h"><span class="meta">04</span><h2 id="constraints-h">Constraints</h2>
+
+<ul>
+  <li><strong>Asymmetric cost of error.</strong> Missing a critical alert costs far more than a false positive, so automation must earn trust step by step.</li>
+  <li><strong>Public data only.</strong> No employer data.</li>
+</ul>
+
+</section>
+<section class="cs-sec" id="hypothesis" aria-labelledby="hypothesis-h"><span class="meta">05</span><h2 id="hypothesis-h">Product hypothesis</h2>
+
+<p>Retrieving remediations from past incidents can cut the attention operators spend on alerts that have been solved before — provided automation is introduced gradually and can be withdrawn.</p>
+<p class="small">Framed from the documented problem statement.</p>
+
+</section>
+<section class="cs-sec" id="alternatives" aria-labelledby="alternatives-h"><span class="meta">06</span><h2 id="alternatives-h">Alternatives and tradeoffs</h2>
+
+<p>The retrieval layer scored well on the first evaluation. How do you measure whether it actually works?</p>
+<ul>
+  <li>Cumulative accuracy across the full dataset — the original method</li>
+  <li>Human spot-check of a sample</li>
+  <li><strong>A chronological split, training on earlier incidents and testing on later ones — chosen</strong></li>
+</ul>
+<p><strong>Tradeoff.</strong> The corrected number was worse, and it changed the product’s phasing and requirements. I had a good result and chose to invalidate it.</p>
+
+</section>
+<section class="cs-sec" id="decisions" aria-labelledby="decisions-h"><span class="meta">07</span><h2 id="decisions-h">Key decisions</h2>
+
+<ul>
+  <li><strong>Automation ladder</strong> with promotion and demotion thresholds committed in advance.</li>
+  <li><strong>Metrics tree</strong> carrying a counter-metric and a hard-stop guardrail, because the cost of a missed critical alert is asymmetric.</li>
+  <li><strong>Re-ran retrieval evaluation as a chronological split</strong> after the cumulative measure proved misleading.</li>
+</ul>
+
+</section>
+<section class="cs-sec" id="experience" aria-labelledby="experience-h"><span class="meta">08</span><h2 id="experience-h">Prototype</h2>
+
+<p>A product brief, a phase-one PRD with acceptance criteria, and a working prototype on public logs.</p>
+<div class="btns"><a class="btn btn--primary ext" href="https://claude.ai/artifact/6TXc3vHuuKzg7rUPvDqSU2" target="_blank" rel="noopener noreferrer">Open the prototype<span class="sr-only"> for Alert Triage Copilot (opens in a new tab)</span></a><a class="btn ext" href="https://claude.ai/artifact/AEuqpmpvUZQWPWbeSbAwYL#2355c655-11a9" target="_blank" rel="noopener noreferrer">Read the product brief<span class="sr-only"> (opens in a new tab)</span></a></div>
+<p class="gap-note"><b>Not documented in the source portfolio.</b> A public link to the phase-one PRD.</p>
+</section>
+<section class="cs-sec" id="evaluation" aria-labelledby="evaluation-h"><span class="meta">09</span><h2 id="evaluation-h">Evaluation and success metrics</h2>
+
+<p>The cumulative measure let the system retrieve remediations that, in production, would not have existed yet. It was scoring well by looking at the future. The chronological split fixes that leak.</p>
+<p>The metrics tree pairs the primary measure with a counter-metric and a hard-stop guardrail; the automation ladder promotes or demotes automation against thresholds set before results were seen.</p>
+<p class="gap-note"><b>Not documented in the source portfolio.</b> The before-and-after evaluation numbers and the threshold values.</p>
+</section>
+<section class="cs-sec" id="outcomes" aria-labelledby="outcomes-h"><span class="meta">10</span><h2 id="outcomes-h">Validation status</h2>
+
+<p><span class="pill pill--concept">Concept · Prototyped</span></p>
+<p>The corrected evaluation changed the product’s phasing and requirements. Not deployed.</p>
+
+</section>
+<section class="cs-sec" id="lessons" aria-labelledby="lessons-h"><span class="meta">11</span><h2 id="lessons-h">Lessons and next steps</h2>
+
+<ul>
+  <li><strong>If an offline metric looks strong, check whether the split leaks time.</strong> This is the correct method for anything retrieving from a growing incident history.</li>
+  <li><strong>Commit automation thresholds in advance</strong>, so promotion and demotion are not argued after the fact.</li>
+</ul>
+
+</section>
+  </article>
+</div>
+
+<div class="wrap">
+  <nav class="cs-next" aria-label="More case studies">
+    <a href="instant-order-resolution.html"><span class="meta">← Previous</span><span class="t">Instant Order Resolution</span></a>
+    <a class="r" href="wonderword.html"><span class="meta">Next →</span><span class="t">WonderWord AI</span></a>
+  </nav>
+</div>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <span>© 2026 Ridham Chawala · Fremont, California</span>
+    <span><a href="mailto:ridhambatra15@gmail.com">ridhambatra15@gmail.com</a> · <a href="../index.html">Back to portfolio</a></span>
+  </div>
+</footer>
+<script src="../assets/main.js" defer></script>
+</body>
+</html>
